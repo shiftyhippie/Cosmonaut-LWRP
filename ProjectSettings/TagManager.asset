@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Hazard Block
+  - Water Block
+  - Floor Block
+  - Wall Block
+  - Enemy Block
+  - Enemy
   layers:
   - Default
   - TransparentFX

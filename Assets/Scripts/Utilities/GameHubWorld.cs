@@ -22,7 +22,7 @@ namespace Utilities
         {
             foreach (Transform child in transform)
             {
-                if (child.CompareTag("Level"))
+                if (child.CompareTag("Player"))
                 {
                     listOfLevels.Add(child.gameObject);
                 }

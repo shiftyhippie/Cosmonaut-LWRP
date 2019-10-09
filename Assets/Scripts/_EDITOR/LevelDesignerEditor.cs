@@ -18,7 +18,10 @@ namespace _EDITOR
             {
                 levelDesignerScript.BuildLevel();
                 levelDesignerScript.BuildInBounds();
-                levelDesignerScript.BuildOutOfBounds();
+                if (levelDesignerScript.hasOutOfBounds)
+                {
+                    levelDesignerScript.BuildOutOfBounds();
+                }
             }
 
             GUILayout.Space(10);
@@ -35,6 +38,13 @@ namespace _EDITOR
                 levelDesignerScript.OptimiseLevelForPlay();
             }
                         
+            GUILayout.Space(10);
+
+            if (GUILayout.Button("Add Hazards And Enemies (Optimise First!)"))
+            {
+                levelDesignerScript.AddHazardsAndEnemies();
+            }      
+            
             GUILayout.Space(10);
 
             if (GUILayout.Button("Build Nav Mesh"))

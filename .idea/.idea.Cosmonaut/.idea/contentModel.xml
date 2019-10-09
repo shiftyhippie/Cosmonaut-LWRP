@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Projects\Unity\Cosmonaut" t="IncludeRecursive">
+    <e p="C:\Users\alexc\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\alexc\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Cosmonaut.-662070871.00" t="ExcludeRecursive" />
+    <e p="C:\Users\alexc\Documents\GitHub\Cosmonaut" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -159,10 +161,14 @@
         </e>
         <e p="Scripts" t="Include">
           <e p="_EDITOR" t="Include">
+            <e p="EnemyPickerEditor.cs" t="Include" />
+            <e p="EnemyPickerScript.cs" t="Include" />
             <e p="FloorTileEditor.cs" t="Include" />
             <e p="FloorTilePrefabEditor.cs" t="Include" />
             <e p="FloorTilePrefabScript.cs" t="Include" />
             <e p="FloorTileScript.cs" t="Include" />
+            <e p="HazardPickerEditor.cs" t="Include" />
+            <e p="HazardPickerScript.cs" t="Include" />
             <e p="LevelDesignerEditor.cs" t="Include" />
             <e p="LevelDesignerScript.cs" t="Include" />
           </e>
@@ -205,7 +211,5 @@
       <e p="Packages" t="ExcludeRecursive" />
       <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
-    <e p="C:\Users\alexc\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\alexc\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Cosmonaut.-729720598.00" t="ExcludeRecursive" />
   </component>
 </project>

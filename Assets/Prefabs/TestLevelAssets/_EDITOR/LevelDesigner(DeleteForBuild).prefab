@@ -45,7 +45,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tile: {fileID: 5237562528866564209, guid: bf6db365d380f5e4d82027ce44c5deb7, type: 3}
   tileLocation: {x: 5, y: 0, z: 10}
+  hasOutOfBounds: 1
   levelPrefab: {fileID: 0}
+  enemyPrefab: {fileID: 0}
+  hazardPrefab: {fileID: 0}
   level: {fileID: 0}
   tileLightMat: {fileID: 2100000, guid: 4721cd3f626b01844b8502ab246cafde, type: 2}
   tileDarkMat: {fileID: 2100000, guid: 89693b64e8089f5459797f8cf759474e, type: 2}
@@ -59,3 +62,5 @@ MonoBehaviour:
   xOffset: 5.5
   levelHeight: 21
   yOffset: 10.5
+  toAdd: []
+  hazards: []

@@ -8,7 +8,11 @@ namespace _EDITOR
     {
         [Header("Level Requirements")] public GameObject tile;
         public Vector3 tileLocation;
+        public bool hasOutOfBounds;
+        private bool optimised;
         public GameObject levelPrefab;
+        public GameObject enemyPrefab;
+        public GameObject hazardPrefab;
         public GameObject level;
         public Material tileLightMat;
         public Material tileDarkMat;
@@ -25,6 +29,9 @@ namespace _EDITOR
         [Header("Level Height")] public int levelHeight;
         public float yOffset;
 
+        public Transform[] toAdd;
+        public Transform[] hazards;
+
         public void BuildLevel()
         {
             if (level == null)
@@ -32,6 +39,8 @@ namespace _EDITOR
                 level = new GameObject {name = "Level"};
                 level.transform.position = Vector3.zero;
             }
+
+            optimised = false;
         }
 
         public void BuildInBounds()
@@ -47,6 +56,30 @@ namespace _EDITOR
             else
             {
                 var children = (from Transform child in levelPrefab.transform select child.gameObject).ToList();
+                children.ForEach(DestroyImmediate);
+            }
+
+            if (enemyPrefab == null)
+            {
+                enemyPrefab = new GameObject {name = "EnemyHolder"};
+                enemyPrefab.transform.position = Vector3.zero;
+                enemyPrefab.transform.parent = level.transform;
+            }
+            else
+            {
+                var children = (from Transform child in enemyPrefab.transform select child.gameObject).ToList();
+                children.ForEach(DestroyImmediate);
+            }
+
+            if (hazardPrefab == null)
+            {
+                hazardPrefab = new GameObject {name = "HazardPrefab"};
+                hazardPrefab.transform.position = Vector3.zero;
+                hazardPrefab.transform.parent = level.transform;
+            }
+            else
+            {
+                var children = (from Transform child in hazardPrefab.transform select child.gameObject).ToList();
                 children.ForEach(DestroyImmediate);
             }
 
@@ -171,7 +204,6 @@ namespace _EDITOR
                     Quaternion.identity);
                 oobWall.gameObject.name = $"{h + 1}";
                 oobWall.transform.parent = levelOobPrefab.transform;
-                ;
             }
 
             for (var w = 0; w <= levelWidth; w++)
@@ -284,6 +316,47 @@ namespace _EDITOR
             foreach (var child in children)
                 if (child.position.y < 0 && child.name != "FloorOfLevel")
                     DestroyImmediate(child.gameObject);
+
+            optimised = true;
+        }
+
+        public void AddHazardsAndEnemies()
+        {
+            toAdd = levelPrefab.gameObject.GetComponentsInChildren<Transform>();
+            
+            if(optimised)
+            {
+                foreach (var optimisedAddition in toAdd)
+                {
+                    if (optimisedAddition.name == "Enemy Block")
+                    {
+                        var position = optimisedAddition.transform.position;
+
+                        var temp = Instantiate(optimisedAddition.GetComponent<EnemyPickerScript>().currentEnemy,
+                            new Vector3(position.x, 1, position.z), Quaternion.identity);
+
+                        temp.transform.parent = enemyPrefab.transform;
+
+                        DestroyImmediate(optimisedAddition.gameObject);
+                    }
+
+                    else if (optimisedAddition.name == "Hazard Block")
+                    {
+                        var position = optimisedAddition.transform.position;
+
+                        var temp = Instantiate(optimisedAddition.GetComponent<HazardPickerScript>().currentHazard,
+                            new Vector3(position.x, 1, position.z), Quaternion.identity);
+
+                        temp.transform.parent = hazardPrefab.transform;
+
+                        DestroyImmediate(optimisedAddition.gameObject);
+                    }
+                }
+            }
+            else
+            {
+                Debug.LogError("ERROR: Level needs to be optimised!");
+            }
         }
 
         public void CreateNavMesh()
