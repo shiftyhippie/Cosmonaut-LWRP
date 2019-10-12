@@ -17,6 +17,14 @@ namespace _EDITOR
         public Material tileLightMat;
         public Material tileDarkMat;
 
+        [Header("Level Setup - DONT EDIT")]
+        public GameObject gameCamera;
+        public GameObject gameLight;
+        public GameObject gameManager;
+        public GameObject gameUi;
+        public GameObject gameLevelChange;
+        public GameObject player;
+
         [Header("Wall GameObjects")] public GameObject levelOobPrefab;
         public GameObject levelOobosPrefab;
         public GameObject tileOob;
@@ -34,10 +42,126 @@ namespace _EDITOR
 
         public void BuildLevel()
         {
+            GameObject temp;
+            
             if (level == null)
             {
                 level = new GameObject {name = "Level"};
                 level.transform.position = Vector3.zero;
+            }
+            
+            if (player == null)
+            {
+                player = Resources.Load("Player") as GameObject;
+                temp = Instantiate(player, new Vector3(0, 0, -(levelHeight / 2f)), Quaternion.identity);
+                player = temp;
+                temp.name = "Player";
+            }
+            else
+            {
+                player = null;
+                var tempDelete = GameObject.Find("Player");
+                DestroyImmediate(tempDelete);
+                
+                player = Resources.Load("Player") as GameObject;
+                temp = Instantiate(player, new Vector3(0, 0, -(levelHeight / 2f)), Quaternion.identity);
+                player = temp;
+                temp.name = "Player";
+            }
+
+            if (gameCamera == null)
+            {
+                gameCamera = Resources.Load("Game Camera") as GameObject;
+                temp = Instantiate(gameCamera);
+                gameCamera = temp;
+                temp.name = "Game Camera";
+            }
+            else
+            {
+                gameCamera = null;
+                var tempDelete = GameObject.Find("Game Camera");
+                DestroyImmediate(tempDelete);
+
+                gameCamera = Resources.Load("Game Camera") as GameObject;
+                temp = Instantiate(gameCamera);
+                gameCamera = temp;
+                temp.name = "Game Camera";
+            }
+
+            if (gameLight == null)
+            {
+                gameLight = Resources.Load("Game Light") as GameObject;
+                temp = Instantiate(gameLight);
+                gameLight = temp;
+                temp.name = "Game Light";
+            }
+            else
+            {
+                gameLight = null;
+                var tempDelete = GameObject.Find("Game Light");
+                DestroyImmediate(tempDelete);
+
+                gameLight = Resources.Load("Game Light") as GameObject;
+                temp = Instantiate(gameLight);
+                gameLight = temp;
+                temp.name = "Game Light";
+            }
+            
+            if (gameManager == null)
+            {
+                gameManager = Resources.Load("Game Manager") as GameObject;
+                temp = Instantiate(gameManager);
+                gameManager = temp;
+                temp.name = "Game Manager";
+            }
+            else
+            {
+                gameManager = null;
+                var tempDelete = GameObject.Find("Game Manager");
+                DestroyImmediate(tempDelete);
+
+                gameManager = Resources.Load("Game Manager") as GameObject;
+                temp = Instantiate(gameManager);
+                gameManager = temp;
+                temp.name = "Game Manager";
+            }
+
+            if (gameUi == null)
+            {
+                gameUi = Resources.Load("Game Ui") as GameObject;
+                temp = Instantiate(gameUi);
+                gameUi = temp;
+                temp.name = "Game Ui";
+            }
+            else
+            {
+                gameUi = null;
+                var tempDelete = GameObject.Find("Game Ui");
+                DestroyImmediate(tempDelete);
+
+                gameUi = Resources.Load("Game Ui") as GameObject;
+                temp = Instantiate(gameUi);
+                gameUi = temp;
+                temp.name = "Game Ui";
+            }
+            
+            if (gameLevelChange == null)
+            {
+                gameLevelChange = Resources.Load("TempDoorModel") as GameObject;
+                temp = Instantiate(gameLevelChange);
+                gameLevelChange = temp;
+                temp.name = "TempDoorModel";
+            }
+            else
+            {
+                gameLevelChange = null;
+                var tempDelete = GameObject.Find("TempDoorModel");
+                DestroyImmediate(tempDelete);
+
+                gameLevelChange = Resources.Load("TempDoorModel") as GameObject;
+                temp = Instantiate(gameLevelChange);
+                gameLevelChange = temp;
+                temp.name = "TempDoorModel";
             }
 
             optimised = false;
@@ -292,20 +416,13 @@ namespace _EDITOR
 
         public void DestroyCurrentLevel()
         {
-            if (levelPrefab == null)
+            var allGo = FindObjectsOfType(typeof(GameObject));
+            foreach (var go in allGo)
             {
-                levelPrefab = Instantiate(new GameObject(), tileLocation, Quaternion.identity);
-            }
-            else
-            {
-                var normalChildren = (from Transform child in levelPrefab.transform select child.gameObject).ToList();
-                var oobChildren = (from Transform child in levelOobPrefab.transform select child.gameObject).ToList();
-                var oobosChildren =
-                    (from Transform child in levelOobosPrefab.transform select child.gameObject).ToList();
-
-                normalChildren.ForEach(DestroyImmediate);
-                oobChildren.ForEach(DestroyImmediate);
-                oobosChildren.ForEach(DestroyImmediate);
+                if (go.name != "LevelDesigner(DeleteForBuild)")
+                {
+                    DestroyImmediate(go);
+                }
             }
         }
 

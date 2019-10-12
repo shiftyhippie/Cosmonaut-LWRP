@@ -8,20 +8,22 @@ using Utilities;
 public class CompleteManager : MonoBehaviour
 {
     [Header("Camera Components")]
-    [SerializeField] private CameraManager cameraManager;
+    public CameraManager cameraManager;
     
     [Header("Player Components")]
-    [SerializeField] private InputManager inputManager;
-    [SerializeField] private PlayerStateManager playerStateManager;
+    public InputManager inputManager;
+    public PlayerStateManager playerStateManager;
     
     [Header("Enemy Components")]
-    [SerializeField] private List<EnemyAiController> enemyAiControllers = new List<EnemyAiController>();
+    public List<EnemyAiController> enemyAiControllers = new List<EnemyAiController>();
 
     [Header("World Components")] 
-    [SerializeField] private LevelChange levelChange;
+    public LevelChange levelChange;
 
     private void Awake()
     {
+        // Assigning Everything it's Components
+        
         // Camera
         
         // Player

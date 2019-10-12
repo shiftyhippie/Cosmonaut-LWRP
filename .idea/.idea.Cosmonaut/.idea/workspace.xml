@@ -5,65 +5,28 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Cosmonaut/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cosmonaut/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Cosmonaut/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cosmonaut/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Cosmonaut/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Cosmonaut/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestLevelAssets/_EDITOR/FloorOfLevel.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestLevelAssets/_EDITOR/FloorOfLevel.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestLevelAssets/_EDITOR/FloorTile.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestLevelAssets/_EDITOR/FloorTile.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestLevelAssets/_EDITOR/LevelDesigner(DeleteForBuild).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TestLevelAssets/_EDITOR/LevelDesigner(DeleteForBuild).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestLevelAssets/_EDITOR/LevelFloor.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestLevelAssets/_EDITOR/LevelFloor.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestLevelAssets/_EDITOR/OobGatewayTile.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestLevelAssets/_EDITOR/OobGatewayTile.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestLevelAssets/_EDITOR/OobTile.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestLevelAssets/_EDITOR/OobTile.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestLevelAssets/_EDITOR/Walls.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestLevelAssets/_EDITOR/Walls.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewTestLevels.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewTestLevels/00_NewMainMenu_TScn.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewTestLevels/00_NewMainMenu_TScn.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewTestLevels/_EDITOR.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewTestLevels/_EDITOR/(testing)EnemyGenerator.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewTestLevels/_EDITOR/(testing)EnemyGenerator.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewTestLevels/_EDITOR/(testing)LevelGenerator.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewTestLevels/_EDITOR/(testing)LevelGenerator.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/NewTestLevels/_EDITOR/(testing)LevelGenerator.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestLevels.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestLevels/00a_MainMenu_TScn.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestLevels/00a_MainMenu_TScn.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestLevels/00b_HubWorld_TScn.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestLevels/00b_HubWorld_TScn.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestLevels/01_FirstPrototypeScene_TScn 1.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestLevels/01_FirstPrototypeScene_TScn 1.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestLevels/01_FirstPrototypeScene_TScn 10.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestLevels/01_FirstPrototypeScene_TScn 10.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestLevels/01_FirstPrototypeScene_TScn 2.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestLevels/01_FirstPrototypeScene_TScn 2.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestLevels/01_FirstPrototypeScene_TScn 3.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestLevels/01_FirstPrototypeScene_TScn 3.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestLevels/01_FirstPrototypeScene_TScn 4.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestLevels/01_FirstPrototypeScene_TScn 4.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestLevels/01_FirstPrototypeScene_TScn 5.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestLevels/01_FirstPrototypeScene_TScn 5.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestLevels/01_FirstPrototypeScene_TScn 6.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestLevels/01_FirstPrototypeScene_TScn 6.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestLevels/01_FirstPrototypeScene_TScn 7.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestLevels/01_FirstPrototypeScene_TScn 7.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestLevels/01_FirstPrototypeScene_TScn 8.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestLevels/01_FirstPrototypeScene_TScn 8.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestLevels/01_FirstPrototypeScene_TScn 9.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestLevels/01_FirstPrototypeScene_TScn 9.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestLevels/01_FirstPrototypeScene_TScn.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestLevels/01_FirstPrototypeScene_TScn.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestLevels/01_PrototypeScene_TScn.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestLevels/01_PrototypeScene_TScn/NavMesh.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestLevels/01_PrototypeScene_TScn/NavMesh.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestLevels/02_SecondPrototypeScene_TScn.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/TestLevels/02_SecondPrototypeScene_TScn.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utilities/GameHubWorld.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Utilities/GameHubWorld.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/_EDITOR/LevelDesignerEditor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/_EDITOR/LevelDesignerEditor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LWRP/Settings/LWRP-LowQuality.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LWRP/Settings/LWRP-LowQuality.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/LWRP/Settings/PostProcessProfile.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/LWRP/Settings/PostProcessProfile.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestLevelAssets/Manager/GameManager.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestLevelAssets/Player/Main Camera.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestLevelAssets/Player/Player.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestLevelAssets/_EDITOR/Directional Light.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestLevelAssets/_EDITOR/LevelDesigner(DeleteForBuild).prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestLevelAssets/_EDITOR/Main Camera.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestLevelAssets/_EDITOR/Requisites/FloorTile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TestLevelAssets/_EDITOR/Requisites/FloorTile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestLevelAssets/_EDITOR/Requisites/OobGatewayTile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TestLevelAssets/_EDITOR/Requisites/OobGatewayTile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestLevelAssets/_EDITOR/Requisites/OobTile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/TestLevelAssets/_EDITOR/Requisites/OobTile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/TestLevelAssets/_EDITOR/Requisites/Walls.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/_FinalNewTestLevels/00_01_Worldname_Scn.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/_FinalNewTestLevels/00_01_Worldname_Scn.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/_FinalNewTestLevels/00_02_Worldname_Scn.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/_FinalNewTestLevels/00_02_Worldname_Scn.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/_FinalNewTestLevels/00_03_Worldname_Scn.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/_FinalNewTestLevels/00_03_Worldname_Scn.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/_NewTestLevels/00_NewMainMenu_TScn.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/_NewTestLevels/00_NewMainMenu_TScn.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CompleteManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CompleteManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/_EDITOR/LevelDesignerScript.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/_EDITOR/LevelDesignerScript.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/NavMeshAreas.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,19 +42,27 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/GameHubWorld.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/UiTestScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/LevelChange.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayGamesScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Shaders/Shadergraph/MainLight.shader" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerStateManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Utilities/ManagerScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/_EDITOR/FloorTilePrefabScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/_EDITOR/GameManagerScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/_EDITOR/HazardPickerScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/_EDITOR/FloorTileScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/_EDITOR/LevelDesignerScript.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controller/MainMenuManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/_EDITOR/FloorTileEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/_EDITOR/EnemyPickerScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/_EDITOR/HazardPickerEditor.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controller/Joystick.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scenes/_FinalNewTestLevels/00_01_Worldname_Scn.unity" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/_EDITOR/EnemyPickerEditor.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/_EDITOR/LevelDesignerEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/_EDITOR/GameManagerEditor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/CompleteManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayGamesScript.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controller/MainMenuManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controller/InputManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Controller/Joystick.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -106,6 +77,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/_EDITOR/HazardPickerScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/_EDITOR/HazardPickerEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/_EDITOR/LevelDesignerEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Shaders/Shadergraph/MainLight.shader" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/_EDITOR/GameManagerEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/CompleteManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controller/InputManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/_EDITOR/GameManagerScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/_EDITOR/LevelDesignerScript.cs" />
       </list>
     </option>
@@ -160,6 +136,8 @@
       <updated>1570375437963</updated>
       <workItem from="1570375441102" duration="7169000" />
       <workItem from="1570457478199" duration="8586000" />
+      <workItem from="1570813439867" duration="1476000" />
+      <workItem from="1570894225261" duration="4612000" />
     </task>
     <servers />
   </component>
@@ -173,7 +151,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

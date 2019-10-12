@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/LWRP/Scenes/SampleScene.unity
-    guid: d1c3109bdb54ad54c8a2b2838528e640
+    path: Assets/Scenes/_FinalNewTestLevels/00_01_Worldname_Scn.unity
+    guid: db1e37c93a1003044ab0c9484d7b652b
   - enabled: 1
-    path: Assets/Scenes/_NewTestLevels/_EDITOR/(testing)LevelGenerator.unity
-    guid: 568da89bb1bcfb34fb0fa0dc97f09888
+    path: Assets/Scenes/_FinalNewTestLevels/00_02_Worldname_Scn.unity
+    guid: 5649e26da58a524448dafe19988e15b7
+  - enabled: 1
+    path: Assets/Scenes/_FinalNewTestLevels/00_03_Worldname_Scn.unity
+    guid: 6fddbf864fc66914798308449a1c30e7
   m_configObjects: {}
