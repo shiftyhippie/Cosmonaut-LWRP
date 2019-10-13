@@ -14,6 +14,13 @@ namespace _EDITOR
 
             GUILayout.Space(10);
 
+            if (GUILayout.Button("Find Scene Assets"))
+            {
+                levelDesignerScript.FindLevelAssets();
+            }
+
+            GUILayout.Space(10);
+
             if (GUILayout.Button("Build Default Scene"))
             {
                 levelDesignerScript.BuildLevel();
@@ -43,6 +50,13 @@ namespace _EDITOR
             if (GUILayout.Button("Add Hazards And Enemies (Optimise First!)"))
             {
                 levelDesignerScript.AddHazardsAndEnemies();
+            }      
+            
+            GUILayout.Space(10);
+
+            if (GUILayout.Button("Add Hazards and Enemies to Manager!"))
+            {
+                levelDesignerScript.AddEnemiesAndHazardsToLists();
             }      
             
             GUILayout.Space(10);

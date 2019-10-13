@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Player;
 using UnityEngine;
 
@@ -10,10 +11,20 @@ namespace Controller
         public PlayerStateManager playerStateManager;
         [SerializeField] private GameObject bullet;
         [SerializeField] private Vector3 enemyPosition;
+        [SerializeField] private List<Enemy.Enemy> enemiesOnLevel = new List<Enemy.Enemy>();
 
         [Header("Inputs")]
         public VariableJoystick variableJoystick;
-    
+
+        public void PlayerAwake()
+        {
+            UpdateEnemyList();
+            if (enemiesOnLevel.Count == 0)
+            {
+                playerStateManager.ChangeLevel();
+            }
+        }
+        
         public void PlayerUpdate()
         {
             GetJoystickInput();
@@ -43,17 +54,24 @@ namespace Controller
             playerStateManager.vertical = v;
             playerStateManager.horizontal = h;
         }
-    
-        private void OnTriggerStay(Collider other)
+
+        public void UpdateEnemyList()
         {
-            if (other.gameObject.CompareTag($"Enemy"))
+            var gameManager = GameObject.Find("Game Manager");
+
+            enemiesOnLevel = gameManager.GetComponent<CompleteManager>().enemies;
+        }
+
+        public void GetClosestEnemy()
+        {
+            UpdateEnemyList();
+            
+            if (enemiesOnLevel.Count > 0)
             {
-                var enemies = GameObject.FindGameObjectsWithTag("Enemy");
-    
                 var distance = Mathf.Infinity;
                 var position = transform.position;
 
-                foreach(var enemy in enemies)
+                foreach(var enemy in enemiesOnLevel)
                 {
                     var difference = enemy.transform.position - position;
 
@@ -70,7 +88,7 @@ namespace Controller
                 if (!AnyKeyboardInput() && !AnyJoystickInput())
                 {
                     ShootNearbyEnemy();
-                }
+                }   
             }
         }
     

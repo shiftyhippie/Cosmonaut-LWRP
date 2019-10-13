@@ -4,15 +4,18 @@ namespace Utilities
 {
     public class BulletDeath : MonoBehaviour
     {
-        [SerializeField] private float lifetime = 3;
+        private const float Lifetime = 2;
+
         private void OnTriggerEnter(Collider other)
         {
             if (other.GetComponent<Collider>().CompareTag("Enemy"))
             {
+                other.gameObject.GetComponent<Enemy.Enemy>().TakenDamage(50);
+
                 Destroy(gameObject);
             }
-        
-            Destroy(gameObject, lifetime);
+            
+            Destroy(gameObject, Lifetime);
         }
     }
 }

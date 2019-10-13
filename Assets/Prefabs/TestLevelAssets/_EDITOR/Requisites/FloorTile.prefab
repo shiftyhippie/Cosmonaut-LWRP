@@ -317,7 +317,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemiesLevelOne:
-  - {fileID: 8953684023393689282, guid: 577afbc2bc02d644a8aa5bf195c386d5, type: 3}
+  - {fileID: 5778036104619012846, guid: b1093de31341cfb4eb56b40ee3979775, type: 3}
   - {fileID: 8953684023393689282, guid: ba4545d17e2ebcb4d8a9d563d9a343f7, type: 3}
   - {fileID: 8953684023393689282, guid: 42bc8c558c9ff4d4989e83f2e9dd2696, type: 3}
   - {fileID: 8953684023393689282, guid: 4f45e786e8babd54fa1b254d760f15ef, type: 3}
@@ -328,7 +328,7 @@ MonoBehaviour:
   - {fileID: 8953684023393689282, guid: 4f4216c7dc8d96945ba2cd5491c85d59, type: 3}
   - {fileID: 8953684023393689282, guid: bd8590d850b21a44a8335f84e5107b57, type: 3}
   - {fileID: 8953684023393689282, guid: 61ca57808833e5242abe52fcef953f46, type: 3}
-  currentEnemy: {fileID: 8953684023393689282, guid: 577afbc2bc02d644a8aa5bf195c386d5,
+  currentEnemy: {fileID: 5778036104619012846, guid: b1093de31341cfb4eb56b40ee3979775,
     type: 3}
   level: 0
 --- !u!1 &5237562528866564209

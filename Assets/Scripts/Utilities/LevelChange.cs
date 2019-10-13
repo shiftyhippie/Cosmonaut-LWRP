@@ -7,18 +7,14 @@ namespace Utilities
 {
     public class LevelChange : MonoBehaviour
     {
-        [SerializeField] private bool canChangeLevel;
-        
-        [SerializeField] private int currentWorld;
+        public bool canChangeLevel;
+        public int currentWorld;
+        public PlayerStateManager playerStateManager;
+        public Collider doorToNewRoom;
+        public int currentScene;
+        public int nextSceneValue;
 
-        [SerializeField] private PlayerStateManager playerStateManager;
-        
-        [SerializeField] private Collider doorToNewRoom;
-        
-        [SerializeField] private int currentScene;
-        [SerializeField] private int nextSceneValue;
-
-        [SerializeField] private TextMeshProUGUI level;
+        public TextMeshProUGUI level;
         
         private void OnTriggerEnter(Collider other)
         {
@@ -38,21 +34,16 @@ namespace Utilities
             currentScene = SceneManager.GetActiveScene().buildIndex;
             
             int counter;
-            var currentSceneTemp = currentScene - 2;
+            var currentSceneTemp = currentScene;
             
             for (counter = 0; currentSceneTemp > 0; counter++)
             {
                 currentSceneTemp -= 10;
             }
 
-            if (currentScene == 2)
-            {
-                counter = 1;
-            }
-            
             currentWorld = counter;
             
-            nextSceneValue = currentWorld * 10 + 2;
+            nextSceneValue = currentWorld * 10;
         }
 
         public void WorldFixedUpdate()
@@ -61,12 +52,12 @@ namespace Utilities
             
             doorToNewRoom.isTrigger = canChangeLevel;
 
-            level.text = $"{currentWorld} : {currentScene + -1}";
+            level.text = $"{currentWorld} : {currentScene}";
         }
 
         private void NextLevel()
         {
-            nextSceneValue = currentWorld * 10 + 2;
+            nextSceneValue = currentWorld * 10 + 1;
             
             if (currentScene < nextSceneValue - 1)
             {
@@ -74,7 +65,7 @@ namespace Utilities
             }
             else if (currentScene >= nextSceneValue - 1)
             {
-                SceneManager.LoadSceneAsync(1);
+                SceneManager.LoadSceneAsync(0);
             }
         }
     }

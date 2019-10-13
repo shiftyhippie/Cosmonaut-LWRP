@@ -1,13 +1,14 @@
 ﻿using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using Utilities;
 
 namespace Player
 {
     public class PlayerStateManager : MonoBehaviour
     {
         [Header("Components / Integral stats")]
-        public bool playerCanChangeLevel = true;
+        public bool playerCanChangeLevel;
 
         public float vertical;
         public float horizontal;
@@ -17,6 +18,8 @@ namespace Player
         public TextMeshProUGUI goldText;
         public TextMeshProUGUI xpText;
 
+        public LevelChange levelChange;
+        
         [Header("Character Stats")]
         public float maxLife;
         public float curLife;
@@ -32,6 +35,16 @@ namespace Player
         [Header("Items")]
         public List<int> upgrades;
 
+        public void PlayerAwake()
+        {
+            levelChange = GameObject.Find("NEXTLEVELGATE").GetComponent<LevelChange>();
+
+            if (playerCanChangeLevel)
+            {
+                ChangeLevel();
+            }
+        }
+        
         public void PlayerUpdate()
         {
             rigidBody.velocity = new Vector3(horizontal * speed, 0, vertical * speed);
@@ -50,6 +63,14 @@ namespace Player
         public void UpdatePlayerXp()
         {
             xpText.text = $"{xp}";
+        }
+
+        public void ChangeLevel()
+        {
+            playerCanChangeLevel = true;
+            
+            levelChange.GetComponent<LevelChange>().canChangeLevel = true;
+            levelChange.transform.parent.GetComponent<Animation>().Play();
         }
     }
 }

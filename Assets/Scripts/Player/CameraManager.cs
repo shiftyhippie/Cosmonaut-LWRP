@@ -6,6 +6,8 @@ namespace Player
     {
         [Header("Components")]
         public Transform playerTransform;
+        public float minCameraZ;
+        public float maxCameraZ;
 
         private float tempPlayerZ;
     
@@ -13,13 +15,13 @@ namespace Player
         {
             tempPlayerZ = playerTransform.position.z;
         
-            if (tempPlayerZ <= -6)
+            if (tempPlayerZ <= minCameraZ)
             {
-                tempPlayerZ = -6;
+                tempPlayerZ = minCameraZ;
             }
-            else if (tempPlayerZ >= 7)
+            else if (tempPlayerZ >= maxCameraZ - 9)
             {
-                tempPlayerZ = 7;
+                tempPlayerZ = maxCameraZ;
             }
             else
             {

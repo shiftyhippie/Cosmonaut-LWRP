@@ -1,4 +1,7 @@
-﻿using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using Enemy;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -37,23 +40,148 @@ namespace _EDITOR
         [Header("Level Height")] public int levelHeight;
         public float yOffset;
 
-        public Transform[] toAdd;
-        public Transform[] hazards;
-
-        public void BuildLevel()
+        public void FindLevelAssets()
         {
-            GameObject temp;
-            
             if (level == null)
             {
-                level = new GameObject {name = "Level"};
-                level.transform.position = Vector3.zero;
+                var go = GameObject.Find("Level");
+                level = go;
+                if (go == null)
+                {
+                    BuildLevel();
+                }
+            }
+            
+            if (levelPrefab == null)
+            {
+                var go = GameObject.Find("FloorOfLevel");
+                levelPrefab = go;
+                if (go == null)
+                {
+                    BuildLevel();
+                }
+            }
+            
+            if (levelOobPrefab == null)
+            {
+                var go = GameObject.Find("OutOfBoundsWalls");
+                levelOobPrefab = go;
+                if (go == null)
+                {
+                    BuildLevel();
+                }
+            }
+            
+            if (levelOobosPrefab == null)
+            {
+                var go = GameObject.Find("OutOfBoundsOffScreen");
+                levelOobosPrefab = go;
+                if (go == null)
+                {
+                    BuildLevel();
+                }
+            }
+                        
+            if (enemyPrefab == null)
+            {
+                var go = GameObject.Find("EnemyHolder");
+                enemyPrefab = go;
+                if (go == null)
+                {
+                    BuildLevel();
+                }
+            }
+                        
+            if (hazardPrefab == null)
+            {
+                var go = GameObject.Find("HazardPrefab");
+                hazardPrefab = go;
+                if (go == null)
+                {
+                    BuildLevel();
+                }
             }
             
             if (player == null)
             {
+                var go = GameObject.Find("Player");
+                player = go;
+                if (go == null)
+                {
+                    BuildLevel();
+                }
+            }
+
+            if (gameCamera == null)
+            {
+                var go = GameObject.Find("Game Camera");
+                gameCamera = go;
+                if (go == null)
+                {
+                    BuildLevel();
+                }
+            }
+
+            if (gameLight == null)
+            {
+                var go = GameObject.Find("Game Light");
+                gameLight = go;
+                if (go == null)
+                {
+                    BuildLevel();
+                }
+            }
+
+            if (gameManager == null)
+            {
+                var go = GameObject.Find("Game Manager");
+                gameManager = go;
+                if (go == null)
+                {
+                    BuildLevel();
+                }
+            }
+
+            if (gameUi == null)
+            {
+                var go = GameObject.Find("Game Ui");
+                gameUi = go;
+                if (go == null)
+                {
+                    BuildLevel();
+                }
+            }
+
+            if (gameLevelChange == null)
+            {
+                var go = GameObject.Find("TempDoorModel");
+                gameLevelChange = go;
+                if (go == null)
+                {
+                    BuildLevel();
+                }
+            }
+        }
+        
+        public void BuildLevel()
+        {
+            var allGo = FindObjectsOfType(typeof(GameObject));
+            foreach (var go in allGo)
+            {
+                if (go.name != "LevelDesigner(DeleteForBuild)")
+                {
+                    DestroyImmediate(go);
+                }
+            }
+            
+            GameObject temp;
+            
+
+            
+            if (player == null)
+            {
                 player = Resources.Load("Player") as GameObject;
-                temp = Instantiate(player, new Vector3(0, 0, -(levelHeight / 2f)), Quaternion.identity);
+                temp = Instantiate(player, new Vector3(0, 1.25f, -(levelHeight / 2f) + 1.5f), Quaternion.identity);
                 player = temp;
                 temp.name = "Player";
             }
@@ -64,7 +192,7 @@ namespace _EDITOR
                 DestroyImmediate(tempDelete);
                 
                 player = Resources.Load("Player") as GameObject;
-                temp = Instantiate(player, new Vector3(0, 0, -(levelHeight / 2f)), Quaternion.identity);
+                temp = Instantiate(player, new Vector3(0, 1.25f, -(levelHeight / 2f) + 1.5f), Quaternion.identity);
                 player = temp;
                 temp.name = "Player";
             }
@@ -72,7 +200,7 @@ namespace _EDITOR
             if (gameCamera == null)
             {
                 gameCamera = Resources.Load("Game Camera") as GameObject;
-                temp = Instantiate(gameCamera);
+                temp = Instantiate(gameCamera, new Vector3(0, 10f, -(levelHeight / 2f) + 1.5f), Quaternion.Euler(60, 0, 0));
                 gameCamera = temp;
                 temp.name = "Game Camera";
             }
@@ -83,7 +211,7 @@ namespace _EDITOR
                 DestroyImmediate(tempDelete);
 
                 gameCamera = Resources.Load("Game Camera") as GameObject;
-                temp = Instantiate(gameCamera);
+                temp = Instantiate(gameCamera, new Vector3(0, 10f, -(levelHeight / 2f) + 1.5f), Quaternion.Euler(60, 0, 0));
                 gameCamera = temp;
                 temp.name = "Game Camera";
             }
@@ -162,6 +290,12 @@ namespace _EDITOR
                 temp = Instantiate(gameLevelChange);
                 gameLevelChange = temp;
                 temp.name = "TempDoorModel";
+            }
+            
+            if (level == null)
+            {
+                level = new GameObject {name = "Level"};
+                level.transform.position = Vector3.zero;
             }
 
             optimised = false;
@@ -439,7 +573,7 @@ namespace _EDITOR
 
         public void AddHazardsAndEnemies()
         {
-            toAdd = levelPrefab.gameObject.GetComponentsInChildren<Transform>();
+            var toAdd = levelPrefab.gameObject.GetComponentsInChildren<Transform>();
             
             if(optimised)
             {
@@ -473,6 +607,19 @@ namespace _EDITOR
             else
             {
                 Debug.LogError("ERROR: Level needs to be optimised!");
+            }
+        }
+
+        public void AddEnemiesAndHazardsToLists()
+        {
+            var temp = enemyPrefab.GetComponentsInChildren<NavMeshAgent>();
+            gameManager.GetComponent<CompleteManager>().numOfEnemies = 0;
+            gameManager.GetComponent<CompleteManager>().enemies.Clear();
+
+            foreach (var enemy in temp)
+            {
+                gameManager.GetComponent<CompleteManager>().enemies.Add(enemy.gameObject.GetComponent<Enemy.Enemy>());
+                gameManager.GetComponent<CompleteManager>().numOfEnemies++;
             }
         }
 
