@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8488815278425879831
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8488815278425879825}
+  - component: {fileID: 8488815278425879830}
+  - component: {fileID: 744253230}
+  m_Layer: 0
+  m_Name: LevelDesigner(DeleteForBuild)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8488815278425879825
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8488815278425879831}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8488815278425879830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8488815278425879831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a6aae7b3b777534293a939293edeb4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tile: {fileID: 5237562528866564209, guid: bf6db365d380f5e4d82027ce44c5deb7, type: 3}
+  tileLocation: {x: 5, y: 0, z: 10}
+  hasOutOfBounds: 1
+  levelPrefab: {fileID: 0}
+  enemyPrefab: {fileID: 0}
+  hazardPrefab: {fileID: 0}
+  level: {fileID: 0}
+  tileLightMat: {fileID: 2100000, guid: 4721cd3f626b01844b8502ab246cafde, type: 2}
+  tileDarkMat: {fileID: 2100000, guid: 89693b64e8089f5459797f8cf759474e, type: 2}
+  gameCamera: {fileID: 0}
+  gameLight: {fileID: 0}
+  gameManager: {fileID: 0}
+  gameUi: {fileID: 0}
+  gameLevelChange: {fileID: 0}
+  player: {fileID: 0}
+  levelOobPrefab: {fileID: 0}
+  levelOobosPrefab: {fileID: 0}
+  tileOob: {fileID: 5237562528866564209, guid: 360ddc0b05f940a449ff6ff9f65ff722, type: 3}
+  tileOobGateway: {fileID: 5237562528866564209, guid: ad37c4f016577e64dae51f02e22946e4,
+    type: 3}
+  tileOutOfBoundsMat: {fileID: 2100000, guid: f32faeaf248e91e4d947d04d1a9fb32b, type: 2}
+  levelWidth: 11
+  xOffset: 5.5
+  levelHeight: 21
+  yOffset: 10.5
+  toAdd: []
+  hazards: []
+--- !u!114 &744253230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8488815278425879831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66f6fb8848b295a4dbf946f5ed757a9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
