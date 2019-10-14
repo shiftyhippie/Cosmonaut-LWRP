@@ -1,4 +1,5 @@
 ﻿using UnityEditor;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 namespace _EDITOR
@@ -45,6 +46,11 @@ namespace _EDITOR
             if (GUILayout.Button("Make Hazard"))
             {
                 floorTileScript.MakeHazard();
+            }
+
+            if (GUI.changed)
+            {
+                EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
             }
         }
     }

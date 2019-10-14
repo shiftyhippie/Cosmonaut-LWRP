@@ -1,4 +1,5 @@
 ﻿using UnityEditor;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 namespace _EDITOR
@@ -71,6 +72,11 @@ namespace _EDITOR
             if (GUILayout.Button("Clear Nav Mesh"))
             {
                 levelDesignerScript.ClearNavMesh();
+            }
+
+            if (GUI.changed)
+            {
+                EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
             }
         }
     }

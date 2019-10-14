@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEditor;
+using UnityEditor.SceneManagement;
 
 namespace _EDITOR
 {
@@ -88,6 +89,11 @@ namespace _EDITOR
                     }
                     
                     break;
+            }
+
+            if (GUI.changed)
+            {
+                EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
             }
         }
     }

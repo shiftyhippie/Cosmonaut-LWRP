@@ -14,6 +14,9 @@ namespace Enemy
         public bool isRanged;
         public bool isFlying;
 
+        public float startTime = 0f;
+        public float thoughtRate = 1f;
+
         public NavMeshAgent navMeshAgent;
         public Transform player; 
 
@@ -39,37 +42,7 @@ namespace Enemy
             hpCurrent -= damage;
         }
 
-        public virtual void Death(int xp)
-        {
-            
-        }
-
-        public virtual void EnemyAwake()
-        {
-            hpCurrent = hpMax;
-        }
-        
-        public virtual void EnemyUpdate()
-        {
-            
-        }
-
-        public virtual void EnemyStateMachine()
-        {
-            
-        }
-
-        public virtual void IdleState()
-        {
-        }
-
-        public virtual void MoveState()
-        {
-        }
-        
-        public virtual void AttackState()
-        {
-        }
+        public virtual void Death(int xp) { }
 
         protected void MoveToPlayer()
         {
@@ -82,5 +55,17 @@ namespace Enemy
         {
             navMeshAgent.isStopped = true;
         }
+
+        public virtual void EnemyAwake() { }
+
+        public virtual void EnemyUpdate() { }
+
+        public virtual void EnemyStateMachine() { }
+
+        public virtual void IdleState() { }
+
+        public virtual void MoveState() { }
+        
+        public virtual void AttackState() { }
     }
 }

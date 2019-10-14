@@ -1,4 +1,5 @@
 ﻿using UnityEditor;
+using UnityEditor.SceneManagement;
 using UnityEngine;
 
 namespace _EDITOR
@@ -17,6 +18,11 @@ namespace _EDITOR
             if (GUILayout.Button("Setup Game Manager for this Level!"))
             {
                 gameManagerScript.SetupGameManager();
+            }
+
+            if (GUI.changed)
+            {
+                EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
             }
         }
     }

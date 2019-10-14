@@ -7,20 +7,12 @@ namespace Enemy
     public class MechAi : Enemy
     {
         public State currentState = State.IDLE;
-        
-        public float startTime = 0f;
-        public float thoughtRate = 1f;
 
         public override void EnemyAwake()
         {
             hpCurrent = hpMax;
 
             InvokeRepeating("EnemyStateMachine", startTime, thoughtRate);
-        }
-
-        public override void EnemyUpdate()
-        {
-
         }
 
         public override void EnemyStateMachine()
