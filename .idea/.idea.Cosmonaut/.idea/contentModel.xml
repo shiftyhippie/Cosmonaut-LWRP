@@ -63,6 +63,10 @@
             <e p="Enemy.cs" t="Include" />
             <e p="MechAi.cs" t="Include" />
           </e>
+          <e p="Hazards" t="Include">
+            <e p="Hazard.cs" t="Include" />
+            <e p="HazardSpikes.cs" t="Include" />
+          </e>
           <e p="Player" t="Include">
             <e p="CameraManager.cs" t="Include" />
             <e p="PlayerData.cs" t="Include" />
@@ -85,8 +89,30 @@
         </e>
         <e p="Shaders" t="Include">
           <e p="MainLightNode.hlsl" t="Include" />
-          <e p="Shadergraph" t="Include">
-            <e p="MainLight.shader" t="Include" />
+          <e p="VFX" t="Include">
+            <e p="GabrielAguiarProductions" t="Include">
+              <e p="Unique_Projectiles_Volume_1" t="Include">
+                <e p="Readme.txt" t="Include" />
+                <e p="Scripts" t="Include">
+                  <e p="CameraShakeSimpleScript.cs" t="Include" />
+                  <e p="ParticleSystemController.cs" t="Include" />
+                  <e p="ParticleSystemControllerEditor.cs" t="Include" />
+                  <e p="ProjectileMoveScript.cs" t="Include" />
+                  <e p="RotateToMouseScript.cs" t="Include" />
+                  <e p="SaveParticleSystemScript.cs" t="Include" />
+                  <e p="Serializables.cs" t="Include" />
+                  <e p="SpawnProjectilesScript.cs" t="Include" />
+                </e>
+                <e p="Shaders" t="Include">
+                  <e p="Additive_EdgeSoft.shader" t="Include" />
+                  <e p="Additive_Scroll01.shader" t="Include" />
+                  <e p="AdditiveMobile_Scroll01.shader" t="Include" />
+                  <e p="AlphaBlended_EdgeSoft.shader" t="Include" />
+                  <e p="AlphaBlended_Scroll01.shader" t="Include" />
+                  <e p="AlphaBlendedMobile_Scroll01.shader" t="Include" />
+                </e>
+              </e>
+            </e>
           </e>
         </e>
         <e p="TextMesh Pro" t="Include">

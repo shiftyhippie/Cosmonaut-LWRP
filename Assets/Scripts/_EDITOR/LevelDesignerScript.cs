@@ -27,10 +27,12 @@ namespace _EDITOR
         public GameObject gameUi;
         public GameObject gameLevelChange;
         public GameObject player;
+        public GameObject water;
 
         [Header("Wall GameObjects")] public GameObject levelOobPrefab;
         public GameObject levelOobosPrefab;
         public GameObject tileOob;
+        public GameObject tileOobWilderness;
         public GameObject tileOobGateway;
         public Material tileOutOfBoundsMat;
 
@@ -219,7 +221,7 @@ namespace _EDITOR
             if (gameLight == null)
             {
                 gameLight = Resources.Load("Game Light") as GameObject;
-                temp = Instantiate(gameLight);
+                temp = Instantiate(gameLight, new Vector3(0, 10, 0), Quaternion.Euler(50, 130, 130));
                 gameLight = temp;
                 temp.name = "Game Light";
             }
@@ -230,7 +232,7 @@ namespace _EDITOR
                 DestroyImmediate(tempDelete);
 
                 gameLight = Resources.Load("Game Light") as GameObject;
-                temp = Instantiate(gameLight);
+                temp = Instantiate(gameLight, new Vector3(0, 10, 0), Quaternion.Euler(50, 130, 130));
                 gameLight = temp;
                 temp.name = "Game Light";
             }
@@ -238,7 +240,7 @@ namespace _EDITOR
             if (gameManager == null)
             {
                 gameManager = Resources.Load("Game Manager") as GameObject;
-                temp = Instantiate(gameManager);
+                temp = Instantiate(gameManager, new Vector3(0, 10, 0), Quaternion.identity);
                 gameManager = temp;
                 temp.name = "Game Manager";
             }
@@ -249,7 +251,7 @@ namespace _EDITOR
                 DestroyImmediate(tempDelete);
 
                 gameManager = Resources.Load("Game Manager") as GameObject;
-                temp = Instantiate(gameManager);
+                temp = Instantiate(gameManager, new Vector3(0, 10, 0), Quaternion.identity);
                 gameManager = temp;
                 temp.name = "Game Manager";
             }
@@ -257,7 +259,7 @@ namespace _EDITOR
             if (gameUi == null)
             {
                 gameUi = Resources.Load("Game Ui") as GameObject;
-                temp = Instantiate(gameUi);
+                temp = Instantiate(gameUi, new Vector3(0, 10, 0), Quaternion.identity);
                 gameUi = temp;
                 temp.name = "Game Ui";
             }
@@ -268,7 +270,7 @@ namespace _EDITOR
                 DestroyImmediate(tempDelete);
 
                 gameUi = Resources.Load("Game Ui") as GameObject;
-                temp = Instantiate(gameUi);
+                temp = Instantiate(gameUi, new Vector3(0, 10, 0), Quaternion.identity);
                 gameUi = temp;
                 temp.name = "Game Ui";
             }
@@ -276,7 +278,7 @@ namespace _EDITOR
             if (gameLevelChange == null)
             {
                 gameLevelChange = Resources.Load("TempDoorModel") as GameObject;
-                temp = Instantiate(gameLevelChange);
+                temp = Instantiate(gameLevelChange, new Vector3(0, 0.5f, levelHeight / 2f - 0.5f), Quaternion.Euler(0, 90, 30));
                 gameLevelChange = temp;
                 temp.name = "TempDoorModel";
             }
@@ -287,7 +289,7 @@ namespace _EDITOR
                 DestroyImmediate(tempDelete);
 
                 gameLevelChange = Resources.Load("TempDoorModel") as GameObject;
-                temp = Instantiate(gameLevelChange);
+                temp = Instantiate(gameLevelChange, new Vector3(0, 0.5f, levelHeight / 2f - 0.5f), Quaternion.Euler(0, 90, 30));
                 gameLevelChange = temp;
                 temp.name = "TempDoorModel";
             }
@@ -534,7 +536,7 @@ namespace _EDITOR
             for (var j = 0; j < 8; j++)
             for (var i = 0; i < levelWidth + 2; i++)
             {
-                var oobWilderness = Instantiate(tileOob,
+                var oobWilderness = Instantiate(tileOobWilderness,
                     new Vector3(-(levelWidth / 2f) - 0.5f + i, 0, -(levelHeight / 2f) - 1.5f - j), Quaternion.identity);
                 oobWilderness.transform.parent = levelOobosPrefab.transform;
             }
@@ -542,13 +544,13 @@ namespace _EDITOR
             for (var j = 0; j < 8; j++)
             for (var i = 0; i < levelWidth + 2; i++)
             {
-                var oobWilderness = Instantiate(tileOob,
+                var oobWilderness = Instantiate(tileOobWilderness,
                     new Vector3(levelWidth / 2f + 0.5f - i, 0, levelHeight / 2f + 1.5f + j), Quaternion.identity);
                 oobWilderness.transform.parent = levelOobosPrefab.transform;
             }
         }
 
-        public void DestroyCurrentLevel()
+        public static void DestroyCurrentLevel()
         {
             var allGo = FindObjectsOfType(typeof(GameObject));
             foreach (var go in allGo)
@@ -562,11 +564,27 @@ namespace _EDITOR
 
         public void OptimiseLevelForPlay()
         {
-            var children = levelPrefab.gameObject.GetComponentsInChildren<Transform>();
-
-            foreach (var child in children)
-                if (child.position.y < 0 && child.name != "FloorOfLevel")
-                    DestroyImmediate(child.gameObject);
+            
+            var allGo = (GameObject[])FindObjectsOfType(typeof(GameObject));
+            
+            foreach (var go in allGo)
+            {
+                if (go.transform.position.y < 0)
+                {
+                    DestroyImmediate(go);
+                }
+            }
+//            var children = levelPrefab.gameObject.GetComponentsInChildren<Transform>();
+//
+//            for (var i = 0; i < children.Length; i++)
+//            {
+//                var child = children[i];
+//                
+//                if (child.position.y < 0)
+//                {
+//                    DestroyImmediate(child.gameObject);
+//                }
+//            }
 
             optimised = true;
         }
@@ -596,7 +614,7 @@ namespace _EDITOR
                         var position = optimisedAddition.transform.position;
 
                         var temp = Instantiate(optimisedAddition.GetComponent<HazardPickerScript>().currentHazard,
-                            new Vector3(position.x, 1, position.z), Quaternion.identity);
+                            new Vector3(position.x, 0.5f, position.z), Quaternion.identity);
 
                         temp.transform.parent = hazardPrefab.transform;
 
@@ -607,6 +625,80 @@ namespace _EDITOR
             else
             {
                 Debug.LogError("ERROR: Level needs to be optimised!");
+            }
+        }
+
+        public void SetDoorPosition()
+        {
+            GameObject temp;
+
+            if (gameLevelChange == null)
+            {
+                gameLevelChange = Resources.Load("TempDoorModel") as GameObject;
+                temp = Instantiate(gameLevelChange, new Vector3(0, 0.5f, levelHeight / 2f - 0.5f), Quaternion.Euler(0, 90, 30));
+                gameLevelChange = temp;
+                temp.name = "TempDoorModel";
+            }
+            else
+            {
+                gameLevelChange = null;
+                var tempDelete = GameObject.Find("TempDoorModel");
+                DestroyImmediate(tempDelete);
+
+                gameLevelChange = Resources.Load("TempDoorModel") as GameObject;
+                temp = Instantiate(gameLevelChange, new Vector3(0, 0.5f, levelHeight / 2f - 0.5f), Quaternion.Euler(0, 90, 30));
+                gameLevelChange = temp;
+                temp.name = "TempDoorModel";
+            }
+        }
+
+        public void DebugFixPlayer()
+        {
+            GameObject temp;
+
+            if (player == null)
+            {
+                player = Resources.Load("Player") as GameObject;
+                temp = Instantiate(player, new Vector3(0, 1.25f, -(levelHeight / 2f) + 1.5f), Quaternion.identity);
+                player = temp;
+                temp.name = "Player";
+            }
+            else
+            {
+                player = null;
+                var tempDelete = GameObject.Find("Player");
+                DestroyImmediate(tempDelete);
+                
+                player = Resources.Load("Player") as GameObject;
+                temp = Instantiate(player, new Vector3(0, 1.25f, -(levelHeight / 2f) + 1.5f), Quaternion.identity);
+                player = temp;
+                temp.name = "Player";
+            }
+        }
+        
+        public void DebugAddWater()
+        {
+            GameObject temp;
+
+            if (water == null)
+            {
+                water = Resources.Load("Water") as GameObject;
+                temp = Instantiate(water, new Vector3(0, 0, 0), Quaternion.Euler(90, 0, 0));
+                temp.transform.localScale = new Vector3(levelWidth + 1, levelHeight + 1, 1);
+                water = temp;
+                temp.name = "Water";
+            }
+            else
+            {
+                water = null;
+                var tempDelete = GameObject.Find("Water");
+                DestroyImmediate(tempDelete);
+
+                water = Resources.Load("Water") as GameObject;
+                temp = Instantiate(water, new Vector3(0, 0, 0), Quaternion.Euler(90, 0, 0));
+                temp.transform.localScale = new Vector3(levelWidth + 1, levelHeight + 1, 1);
+                water = temp;
+                temp.name = "Water";
             }
         }
 

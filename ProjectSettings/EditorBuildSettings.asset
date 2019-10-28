@@ -9,33 +9,81 @@ EditorBuildSettings:
     path: Assets/Scenes/_FinalNewTestLevels/00_00_TestMenu_Scn.unity
     guid: 560020661aa2dda4c8656978130937c3
   - enabled: 1
-    path: Assets/Scenes/_FinalNewTestLevels/00_01_Worldname_Scn.unity
-    guid: db1e37c93a1003044ab0c9484d7b652b
+    path: Assets/Scenes/_FinalNewTestLevels/02_TestAlpherius/02_00_Alpherius_Scn.unity
+    guid: c9835c132026dd440bf1c6c6f88228ee
   - enabled: 1
-    path: Assets/Scenes/_FinalNewTestLevels/00_02_Worldname_Scn.unity
-    guid: 5649e26da58a524448dafe19988e15b7
+    path: Assets/Scenes/_FinalNewTestLevels/02_TestAlpherius/02_01_Alpherius_Scn.unity
+    guid: 7019bd35ab885ac46a0514ec528e6656
   - enabled: 1
-    path: Assets/Scenes/_FinalNewTestLevels/00_03_Worldname_Scn.unity
-    guid: 6fddbf864fc66914798308449a1c30e7
+    path: Assets/Scenes/_FinalNewTestLevels/02_TestAlpherius/02_02_Alpherius_Scn.unity
+    guid: 0f9df47847606d14ebb59bb02bcad011
   - enabled: 1
-    path: Assets/Scenes/_FinalNewTestLevels/00_04_Worldname_Scn.unity
-    guid: fb838d89cbedec34ab8e15685ddf8395
+    path: Assets/Scenes/_FinalNewTestLevels/02_TestAlpherius/02_03_Alpherius_Scn.unity
+    guid: 1932c805a95becf45b2dc7953a4c1663
   - enabled: 1
-    path: Assets/Scenes/_FinalNewTestLevels/00_05_Worldname-Angel_Scn.unity
-    guid: f5dd7ebc08bebf34a98c78edf29328ad
+    path: Assets/Scenes/_FinalNewTestLevels/02_TestAlpherius/02_04_Alpherius_Scn.unity
+    guid: 1a7f71771d39c5b4d83206d5b53000e9
   - enabled: 1
-    path: Assets/Scenes/_FinalNewTestLevels/00_06_Worldname_Scn.unity
-    guid: 2bc8fe1d324e8bb4297e480b5b01d4af
+    path: Assets/Scenes/_FinalNewTestLevels/02_TestAlpherius/02_05_Alpherius_Scn.unity
+    guid: 87ba2217bca849c42953bacf75eb8152
   - enabled: 1
-    path: Assets/Scenes/_FinalNewTestLevels/00_07_Worldname_Scn.unity
-    guid: 423dad25e70d9094db5a3838c2d3b95e
+    path: Assets/Scenes/_FinalNewTestLevels/02_TestAlpherius/02_06_Alpherius_Scn.unity
+    guid: 278519756e2d9d442bbed8805c7a6abd
   - enabled: 1
-    path: Assets/Scenes/_FinalNewTestLevels/00_08_Worldname_Scn.unity
-    guid: 5ce16394d15e09247900df29b15237d6
+    path: Assets/Scenes/_FinalNewTestLevels/02_TestAlpherius/02_07_Alpherius_Scn.unity
+    guid: c7ec002e08a80dc47a0656c1ced1124d
   - enabled: 1
-    path: Assets/Scenes/_FinalNewTestLevels/00_09_Worldname_Scn.unity
-    guid: ae615a10a9bdfcf4fb335ef51b150be9
+    path: Assets/Scenes/_FinalNewTestLevels/02_TestAlpherius/02_08_Alpherius_Scn.unity
+    guid: ab032070f8297d940a4521e468243a9f
   - enabled: 1
-    path: Assets/Scenes/_FinalNewTestLevels/00_10_Worldname-Boss_Scn.unity
-    guid: 196eeb5e055aba64084ba653733817c8
+    path: Assets/Scenes/_FinalNewTestLevels/02_TestAlpherius/02_09_Alpherius_Scn.unity
+    guid: 98b8d6f3c3ed13e49a0770df9ad7eaca
+  - enabled: 1
+    path: Assets/Scenes/_FinalNewTestLevels/02_TestAlpherius/02_10_Alpherius_Scn.unity
+    guid: 8925ce6d9d376e94281130a444d90b41
+  - enabled: 1
+    path: Assets/Scenes/_FinalNewTestLevels/02_TestAlpherius/02_11_Alpherius_Scn.unity
+    guid: cdae4f3c64fb9a94b87c1dea0192eabe
+  - enabled: 1
+    path: Assets/Scenes/_FinalNewTestLevels/02_TestAlpherius/02_12_Alpherius_Scn.unity
+    guid: 6c2ab70f7d383de4a904bcabf82f7e13
+  - enabled: 1
+    path: Assets/Scenes/_FinalNewTestLevels/02_TestAlpherius/02_13_Alpherius_Scn.unity
+    guid: c9321c9dc4fdd6046b0b95fa0d96aed2
+  - enabled: 1
+    path: Assets/Scenes/_FinalNewTestLevels/02_TestAlpherius/02_14_Alpherius_Scn.unity
+    guid: 0079cd1f058d1d743a4044d4e591390c
+  - enabled: 1
+    path: Assets/Scenes/_FinalNewTestLevels/02_TestAlpherius/02_15_Alpherius_Scn.unity
+    guid: 28c24760c136197489997741555d2e06
+  - enabled: 1
+    path: Assets/Scenes/_FinalNewTestLevels/02_TestAlpherius/02_16_Alpherius_Scn.unity
+    guid: 6b5f9e89cfa26084f931b44462414e71
+  - enabled: 1
+    path: Assets/Scenes/_FinalNewTestLevels/02_TestAlpherius/02_17_Alpherius_Scn.unity
+    guid: a1bf32f975f5b174db717c6ac04cb740
+  - enabled: 1
+    path: Assets/Scenes/_FinalNewTestLevels/02_TestAlpherius/02_18_Alpherius_Scn.unity
+    guid: 509c9bdafad64ae4f829b25c2b33bc54
+  - enabled: 1
+    path: Assets/Scenes/_FinalNewTestLevels/02_TestAlpherius/02_19_Alpherius_Scn.unity
+    guid: 300c72eac86b3b74e8fd8ed9900035ce
+  - enabled: 1
+    path: Assets/Scenes/_FinalNewTestLevels/02_TestAlpherius/02_20_Alpherius_Scn.unity
+    guid: 3d59d8a1ab3c1da4ba64dc453defecf9
+  - enabled: 1
+    path: Assets/Scenes/_FinalNewTestLevels/02_TestAlpherius/02_21_Alpherius_Scn.unity
+    guid: 5d038af15fddb4747835e8b71a029aa9
+  - enabled: 1
+    path: Assets/Scenes/_FinalNewTestLevels/02_TestAlpherius/02_22_Alpherius_Scn.unity
+    guid: 1a86f151053609f4dba69fd4b85b9831
+  - enabled: 1
+    path: Assets/Scenes/_FinalNewTestLevels/02_TestAlpherius/02_23_Alpherius_Scn.unity
+    guid: 569e5c57e05fb5349bbf378c42fcac89
+  - enabled: 1
+    path: Assets/Scenes/_FinalNewTestLevels/02_TestAlpherius/02_24_Alpherius_Scn.unity
+    guid: 2daf7c94163149648a9b9397b395842b
+  - enabled: 1
+    path: Assets/Scenes/_FinalNewTestLevels/02_TestAlpherius/02_25_Alpherius_Scn.unity
+    guid: c5e45c7e255015c498de8d5e8038ba4a
   m_configObjects: {}

@@ -6,6 +6,9 @@ using Utilities;
 
 public class CompleteManager : MonoBehaviour
 {
+    [Header("Gameplay Elements")] 
+    public int worldNum;
+    
     [Header("Camera Components")]
     public CameraManager cameraManager;
     

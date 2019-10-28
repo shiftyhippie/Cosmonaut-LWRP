@@ -22,11 +22,6 @@ namespace Utilities
             {
                 NextLevel();
             }
-            else
-            {
-                Debug.Log("ERROR: you shouldn't be able to collide with this object; as canChangeLevel" +
-                                   " must be active and Tag must be 'Player'!");
-            }
         }
 
         public void WorldAwake()
@@ -38,12 +33,12 @@ namespace Utilities
             
             for (counter = 0; currentSceneTemp > 0; counter++)
             {
-                currentSceneTemp -= 10;
+                currentSceneTemp -= 25;
             }
 
             currentWorld = counter;
             
-            nextSceneValue = currentWorld * 10;
+            nextSceneValue = currentWorld * 26;
         }
 
         public void WorldFixedUpdate()
@@ -57,13 +52,13 @@ namespace Utilities
 
         private void NextLevel()
         {
-            nextSceneValue = currentWorld * 10 + 1;
+            nextSceneValue = currentWorld * 26;
             
-            if (currentScene < nextSceneValue - 1)
+            if (currentScene < nextSceneValue)
             {
                 SceneManager.LoadSceneAsync(currentScene + 1);
             }
-            else if (currentScene >= nextSceneValue - 1)
+            else if (currentScene >= nextSceneValue)
             {
                 SceneManager.LoadSceneAsync(0);
             }

@@ -91,7 +91,7 @@ namespace _EDITOR
         public void MakeFloor()
         {
             var floorBlockPosition = floorBlock.transform.position;
-            floorBlockPosition = new Vector3(floorBlockPosition.x, 0, floorBlockPosition.z);
+            floorBlockPosition = new Vector3(floorBlockPosition.x, 0.5f, floorBlockPosition.z);
             floorBlock.transform.position = floorBlockPosition;
             
             var wallBlockPosition = wallBlock.transform.position;
@@ -116,7 +116,7 @@ namespace _EDITOR
         public void MakeObstacle()
         {
             var floorBlockPosition = floorBlock.transform.position;
-            floorBlockPosition = new Vector3(floorBlockPosition.x, 0, floorBlockPosition.z);
+            floorBlockPosition = new Vector3(floorBlockPosition.x, 0.5f, floorBlockPosition.z);
             floorBlock.transform.position = floorBlockPosition;
             
             var wallBlockPosition = wallBlock.transform.position;
@@ -166,7 +166,7 @@ namespace _EDITOR
         public void MakeEnemy()
         {
             var floorBlockPosition = floorBlock.transform.position;
-            floorBlockPosition = new Vector3(floorBlockPosition.x, 0, floorBlockPosition.z);
+            floorBlockPosition = new Vector3(floorBlockPosition.x, 0.5f, floorBlockPosition.z);
             floorBlock.transform.position = floorBlockPosition;
             
             var wallBlockPosition = wallBlock.transform.position;
@@ -191,7 +191,7 @@ namespace _EDITOR
         public void MakeHazard()
         {
             var floorBlockPosition = floorBlock.transform.position;
-            floorBlockPosition = new Vector3(floorBlockPosition.x, 0, floorBlockPosition.z);
+            floorBlockPosition = new Vector3(floorBlockPosition.x, 0.5f, floorBlockPosition.z);
             floorBlock.transform.position = floorBlockPosition;
             
             var wallBlockPosition = wallBlock.transform.position;

@@ -1,4 +1,5 @@
-﻿using UnityEditor;
+﻿using System.Runtime.Remoting.Messaging;
+using UnityEditor;
 using UnityEditor.SceneManagement;
 using UnityEngine;
 
@@ -36,7 +37,7 @@ namespace _EDITOR
 
             if (GUILayout.Button("Delete Current Scene"))
             {
-                levelDesignerScript.DestroyCurrentLevel();
+                LevelDesignerScript.DestroyCurrentLevel();
             }
             
             GUILayout.Space(10);
@@ -73,7 +74,25 @@ namespace _EDITOR
             {
                 levelDesignerScript.ClearNavMesh();
             }
+            
+            GUILayout.Space(10);
 
+            EditorGUILayout.LabelField("Debug fix-y tools");
+            if (GUILayout.Button("Debug Fix Door Position"))
+            {
+                levelDesignerScript.SetDoorPosition();
+            }
+            
+            if (GUILayout.Button("Fix Player if not colliding"))
+            {
+                levelDesignerScript.DebugFixPlayer();
+            }
+            
+            if (GUILayout.Button("Debug Add Water (Only do just before level ready to use)"))
+            {
+                levelDesignerScript.DebugAddWater();
+            }
+            
             if (GUI.changed)
             {
                 EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());

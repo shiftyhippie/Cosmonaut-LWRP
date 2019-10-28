@@ -12,7 +12,7 @@ namespace Enemy
         {
             hpCurrent = hpMax;
 
-            InvokeRepeating("EnemyStateMachine", startTime, thoughtRate);
+            InvokeRepeating(nameof(EnemyStateMachine), startTime, thoughtRate);
         }
 
         public override void EnemyStateMachine()
@@ -34,7 +34,7 @@ namespace Enemy
         public override void Death(int xp)
         {
             Debug.Log($"Dropped {xp}xp/gold!");
-            player.gameObject.GetComponent<PlayerStateManager>().ChangeLevel();
+            //player.gameObject.GetComponent<PlayerStateManager>().ChangeLevel();
 
             var gm = GameObject.Find("Game Manager").GetComponent<CompleteManager>();
             gm.enemies.Remove(GetComponent<MechAi>());

@@ -102,7 +102,7 @@ namespace Controller
         
                 projectile.transform.position = position;
                 var rb = projectile.GetComponent<Rigidbody>();
-                
+                rb.gameObject.transform.position = new Vector3(position.x, position.y + 1, position.z);
                 rb.velocity = playerStateManager.bulletSpeed * (enemyPosition - position).normalized;
             }
         }
